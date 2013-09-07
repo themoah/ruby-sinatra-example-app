@@ -1,0 +1,9 @@
+---
+applications:
+- name: ruby-sinatra-example-app
+  memory: 128M
+  instances: 1
+  host: ruby-sinatra-example-app
+  domain: de.a9sapp.eu
+  path: .
+  command: ruby app.rb
