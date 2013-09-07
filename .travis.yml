@@ -1,0 +1,4 @@
+language: ruby
+
+# These tests always succeed :)
+script: "true"
