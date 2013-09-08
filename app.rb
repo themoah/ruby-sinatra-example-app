@@ -5,5 +5,5 @@ require 'bundler/setup'
 require 'sinatra'
 
 get '/' do
-  'Hello world!'
+  'Hello world! Version 2.'
 end
