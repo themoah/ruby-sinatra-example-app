@@ -1,2 +1,10 @@
 language: ruby
 
+sudo: required
+
+cache: bundler
+
+rvm:
+  - 2.3.8
+
+script: bundle exec rake test:unit
