@@ -12,6 +12,10 @@ get '/' do
   output
 end
 
+get '/devops' do
+  'rule the world'
+end
+
 get "/google" do
   require "httparty"
   HTTParty.get('http://google.com', follow_redirects: true).body

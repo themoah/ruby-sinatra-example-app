@@ -6,6 +6,11 @@ describe "anynines sinatra example" do
     expect(last_response.status).to eq 200
   end
 
+  it "recognize one true king" do
+    get '/devops'
+    expect(last_response.body).to match("rule the world")
+  end
+
   it "should display hello world" do
     get '/'
     expect(last_response.body).to match("Hello world")
