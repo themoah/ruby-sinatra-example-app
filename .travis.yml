@@ -12,7 +12,7 @@ env:
   - secure: cwv4IoWq2oUMsi0aHew7fI88XiFPWc4zcQq5h/QNDGL0ysjyLgwJPMHaqTU/bZt8JNK7StunBLpVJpNMAGkARd55b2gngMk9jorZqA+ob+9/Koc0rHTvSOKXenU0inpc32DrTpD6tP1K+L6vv0wrcsKfVu/Uf5Ke5QZNvz1AoAYfW/NbHceIrPMANkl2NHXySvyOOitxC0FtfKElzkuB0X/rK2xekqfd2egMyGsIXQluqYF11MO+9Cr/wHY5GiTRIlzabI1xEDf8n0l9OzkDb0Hi0L6UV3oBEsF1NipSV0TSudVAfm8nQOPhAKk8snRsOkzOYNw4YQUUcvC1J4zw0u/31vJ1kkIO/82f+CI1mQC7lbS1WIwXzB5JLvwGRDx9La+RkpCVel9Ntdekc3TQ95faYjnG6JqJyqN3TbY5EX1spdPQNfAZ1Wulr1KXYOtfmXGGScF4PxNk4lOrZWPdbo8VonZwwunFFxNKMgdOazS2K5fjAVeC9KqvijcPnoFwrWBM4auwgjQXviUoCaAmjNliT0whqiKK+lLnE77oSyorUSYuywO0I9d8Z4zdGEhW+q6n+RGuuqHh3k/ULT9IYotbR4KUOUDDu8dEJAsYxliOQUAyjhPFnX4HmklXxdEXF0RmSTWxGsx4Ariz+ckA/ayqsePdvrMdq0hx3FdjUQs=
 
 after_success:
-  - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
+  - docker login -u $DOCKER_USER -p $DOCKER_PASS
   - export REPO=avivd/devops-sample
   - docker build -f Dockerfile -t $REPO:local .
   - docker tag $REPO:local $REPO:travis-$TRAVIS_BUILD_NUMBER
