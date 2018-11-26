@@ -15,3 +15,7 @@ Run from docker `docker run devops-sample:local`
 
 Github - https://github.com/themoah/ruby-sinatra-example-app
 Travis - https://travis-ci.org/themoah/ruby-sinatra-example-app 
+
+
+(In progress)
+Deployment can be done via k8s or chef-solo
