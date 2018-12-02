@@ -16,6 +16,9 @@ Run from docker `docker run devops-sample:local`
 Github - https://github.com/themoah/ruby-sinatra-example-app
 Travis - https://travis-ci.org/themoah/ruby-sinatra-example-app 
 
+Deployment via k8s:
+if `kubectl` is configured:
+`cd k8s`
+`kubectl apply -f *.yaml`
 
-(In progress)
-Deployment can be done via k8s or chef-solo
+if `chef-solo` is configured, copy content of `chef-solo` and run `sudo chef-solo -c %CONFIG% -j %PATH_TO_ROLE%`
